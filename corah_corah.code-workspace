@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"uri": "vscode-vfs://github/WalkerGould/corah_corah"
+		},
+		{
+			"uri": "vscode-vfs://github/WalkerGould"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "corah_corah"
+	}
+}

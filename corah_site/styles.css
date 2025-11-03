@@ -1,6 +1,6 @@
 
 html {
-  font-size: 16px; /* or 62.5% for easier rem math */
+  font-size: 19px; /* or 62.5% for easier rem math */
   scroll-behavior: smooth;
   height: 100%;
   overflow-x: hidden;
@@ -24,7 +24,7 @@ h1,h2,h3,h4,h5,h6 {
 .header-inner-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;
+    justify-content:center;
     align-items: center;
     
 }
@@ -52,6 +52,7 @@ button {
     padding-bottom: 12px;
     border-radius: 32px;
     border: none;
+    font-size: 2rem;
 }
 
 .nav-button {

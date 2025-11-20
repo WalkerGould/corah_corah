@@ -1,0 +1,279 @@
+
+
+html {
+  font-size: 19px; /* or 62.5% for easier rem math */
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow-x: hidden;
+  /* To Do - Learn about Box Sizing */
+  /* box-sizing: border-box; */
+}
+
+body {
+    font-family: 'Open Sans';
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Montserrat';
+}
+
+.header-section-container {
+    align-content: center;
+    
+}
+
+.header-inner-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    
+}
+
+.nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items:left;
+    gap: 8px;
+}
+
+.logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 16px;
+}
+
+
+.nav-button {
+    background-color: #7B458F;
+}
+
+
+
+
+
+
+:root {
+  /* ... previous tokens ... */
+
+  /* Fluid header paddings (around 32px horizontally) */
+  --pad-header-inline: clamp(1rem, 4vw, 2rem);   /* L/R padding */
+  --pad-header-block-top: clamp(1rem, 3vw, 2rem);
+  --pad-header-block-bottom: clamp(0.25rem, 1vw, 0.5rem);
+
+  /* Fluid nav gap & padding that hover around 12/24px */
+  --gap-header-main: clamp(1rem, 2vw, 2rem);     /* between logo + nav */
+  --gap-nav-links: clamp(0.5rem, 1.5vw, 0.75rem);
+
+  --pad-nav-container: clamp(0.5rem, 1.5vw, 0.75rem);
+  --pad-nav-link-x: clamp(1rem, 2vw, 1.5rem);    /* L/R padding */
+  --pad-nav-link-y-top: clamp(0.4rem, 0.8vw, 0.5rem);
+  --pad-nav-link-y-bottom: clamp(0.6rem, 1vw, 0.75rem);
+}
+
+.header-section-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-32);
+
+  padding-top: var(--pad-header-block-top);
+  padding-right: var(--pad-header-inline);
+  padding-bottom: var(--pad-header-block-bottom);
+  padding-left: var(--pad-header-inline);
+
+  background-color: var(--color-header-bg);
+  color: var(--color-header-text);
+}
+
+/* Flex row: logo left, nav right */
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--gap-header-main);
+  padding: 0;
+}
+
+/* Logo row */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 1vw, 1rem);
+}
+
+/* Fluid logo & wordmark size */
+.corah-brand-logo {
+  width: clamp(32px, 2.5vw + 24px, 48px);
+  height: auto;
+  display: block;
+}
+
+.corah-brand-wordmark-logo {
+  height: clamp(20px, 2vw + 12px, 32px);
+  width: auto;
+  display: block;
+}
+
+/* Nav row */
+.nav-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  gap: var(--gap-nav-links);
+  padding: var(--pad-nav-container);
+
+  overflow-x: auto;
+}
+
+/* Each nav “button” wrapper */
+.button-container {
+  padding: var(--space-3);
+}
+
+/* Nav link as a pill */
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: var(--pad-nav-link-y-top);
+  padding-right: var(--pad-nav-link-x);
+  padding-bottom: var(--pad-nav-link-y-bottom);
+  padding-left: var(--pad-nav-link-x);
+
+  border-radius: 999px;
+  border: none;
+  text-decoration: none;
+
+  font-size: clamp(0.85rem, 0.3vw + 0.8rem, 1rem);
+  font-weight: 600;
+  color: var(--color-header-link-primary);
+  background-color: var(--color-header-link-primary-bg);
+
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .nav-container {
+    overflow-x: visible;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-container {
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid #FFFFFF;
+  outline-offset: 2px;
+}
+
+
+.hero-page-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #d6c0c0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--gap-header-main);
+  padding: 0;
+}
+
+main.hero-page-container .hero-cta-container {
+    display: flex;
+    background-color: rgb(173, 161, 161);
+    flex-wrap:wrap;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    width:max-content;
+    height:fit-content;
+    flex-grow: 1;
+
+}
+
+.headline {
+font-size: 40px;
+ display: flex;
+ flex-wrap: wrap;
+ flex-grow: 1;
+ width:max-content;
+ height:fit-content;
+ padding-top: 16px;
+ padding-bottom: 16px;
+ padding-left: 16px;
+ padding-right: 16px;
+}
+
+.subheadline {
+    font-size: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    width:max-content;
+    height:fit-content;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+}
+
+
+.cta .cta-container .cta-button-frame-register {
+    width:max-content;
+    height:fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    white-space: pre-wrap;
+}
+
+.cta .cta-container .cta-button-container-volunteer {
+    width:max-content;
+    height:fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    white-space: pre-wrap;
+}
+
+
+
+.hero_button {
+    border-radius: 24px;
+    background-color: #7B458F;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    width:max-content;
+    height:fit-content;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-content: 12px;
+    align-items: center;
+
+
+}
+
+.hero-image-container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-content: center;
+    align-items: center;
+}

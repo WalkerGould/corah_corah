@@ -230,93 +230,94 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
-.hero-cta-container {
-    align-items: left;
-    justify-content: left;
-    border-style: solid;
-    border-color: blue
-}
-
-
 main.hero-page-container {
-    display: inline-flex;
-    background-color: rgb(173, 161, 161);
+
+    display:flex;
     flex-wrap:wrap;
+    background-color: rgb(173, 161, 161);
+    gap: 200px;
     padding-top: 16px;
     padding-bottom: 16px;
     padding-left: 16px;
     padding-right: 16px;
-    width:max-content;
-    height:fit-content;
+    width:100%;
+    height:100%;
     flex-grow: 1;
     border-style: solid;
     border-color: red;
-    align-items: center;
-    justify-content:center;
     flex-direction: row; /* Ensure horizontal layout on large screens */
+  
 
 
 }
 
+.hero-cta-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    border-style: solid;
+    border-color: blue;
+    width: 50%;
+}
+
+
 .headline {
   display: inline-flex;  /* Aligns the header and subheading inline */
-  align-items: center;   /* Centers vertically (if they have different heights) */
-  gap: 10px;             /* Space between the header and subheading */
-font-size: 40px;
+  align-items: center;   /* Centers vertically (if they have different heights) */            /* Space between the header and subheading */
+  font-size: 40px;
   display: inline-flex;
  flex-wrap: wrap;
  flex-grow: 1;
- width:fit-content;
+ width: 90%;
  height:fit-content;
- max-width: 687px;
  min-width: 320px;
  padding-top: 16px;
  padding-bottom: 16px;
  padding-left: 16px;
  padding-right: 16px;
- justify-content: left;
- align-items:left;
+ justify-content: center;
+ align-items:center;
  gap: 8px;
  border-style: solid;
 
- width: 50%;
 }
 
 .subheadline {
   display: inline-flex;  /* Aligns the header and subheading inline */
   align-items: center;   /* Centers vertically (if they have different heights) */
   gap: 10px;             /* Space between the header and subheading */
-    max-width: 687px;
     min-width: 320px;
     font-size: 32px;
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
-    width:fit-content;
+
     height: 20%;
     padding-top: 16px;
     padding-bottom: 16px;
     padding-left: 16px;
     padding-right: 16px;
-    justify-content: left;
-    align-items:left;
+    justify-content: center;
+    align-items:center;
     gap: 8px;
     border-style: solid;
-    width: 50%;
+    width: 90%;
 
 }
 
 
 .cta {
-    display: inline-block;  /* Aligns the header and subheading inline */
+    display: inline-flex;  /* Aligns the header and subheading inline */
    /* Centers vertically (if they have different heights) */
     gap: 10px;             /* Space between the header and subheading */
-    max-width: 687px;
     min-width: 320px;
     font-size: 32px;
     flex-wrap: wrap;
     flex-grow: 1;
-    width: 20%;
+    flex-direction: row;
+    width: 90%;
     height: 20%;
     padding-top: 16px;
     padding-bottom: 16px;
@@ -325,8 +326,6 @@ font-size: 40px;
     justify-content: left;
     gap: 8px;
     border-style: solid;
-    width: 0%;
-
     border-color: yellow;
     flex-direction: row;
 }
@@ -334,20 +333,18 @@ font-size: 40px;
 
 .cta-container {
 
-  display: inline-block;
+  display: flex;
   border-color: rgb(0, 98, 128);
   border-width: 30px;
 }
 
 .hero_button {
-    height: fit-content;
-    margin-right: 300px;
 
     border-style: solid;
     border-color: green;
-    width: 50%;                   /* Let the width adjust automatically */
+    width: 100%;                   /* Let the width adjust automatically */
     height: fit-content;           /* Height adjusts based on content */
-    max-width: 687px;              /* Maximum width */
+          /* Maximum width */
     min-width: 245px;              /* Minimum width */
     border-radius: 24px;
     background-color: #7B458F;
@@ -362,47 +359,46 @@ font-size: 40px;
 
 
 
-.hero_button1 li {
-    display: inline-block;
-    margin-bottom: 64px;
+.hero_button1 {
+  margin-left: 85px;
     border-style: solid;
     border-color: green;
-    width: fit-content;                /* Let the width adjust automatically */
+    width: 100%;                   /* Let the width adjust automatically */
     height: fit-content;           /* Height adjusts based on content */
-    max-width: 687px;              /* Maximum width */
+           /* Maximum width */
     min-width: 245px;              /* Minimum width */
     border-radius: 24px;
     background-color: #7B458F;
-    display: inline-block;
+    display: flex;
     flex-wrap: wrap;             /* Prevent wrapping of items inside the button */
     justify-content: space-between; /* Distribute space between button items */
-        /* Vertically center the items */
     gap: 16px;                     /* Space between items inside the button */
     padding: 16px;                 /* Apply uniform padding */
     box-sizing: border-box;        /* Ensure padding and border are included in width/height */
     flex-direction: row;           /* Align child items horizontally */
-
 }
+
+
 
 .hero-image-container {
     border-style: solid;
     border-color: green;
     max-width: 687px;                /* Maximum width */
     min-width: 245px;                /* Minimum width */
-    width: 100%;                     /* Full width but constrained by max-width */
+    width: 50%;                    /* Full width but constrained by max-width */
     height: fit-content;
     border-radius: 24px;
     background-color: #7B458F;
     display: flex;
-    flex-wrap: nowrap;               /* Prevent wrapping, items stay in one row */
-    flex-grow: 0;                    /* Prevent growing */
-    height: fit-content;             /* Height adjusts based on content */
+    flex-wrap: wrap;               /* Prevent wrapping, items stay in one row */
+    flex-grow: 0;                    /* Prevent growing */             /* Height adjusts based on content */
     padding: 16px;                   /* Uniform padding */
-    justify-content: space-between;  /* Distribute space between items */
-    align-items: center;             /* Vertically center the items */
+    justify-content: center;  /* Distribute space between items */
+    align-items: right;             /* Vertically center the items */
     gap: 16px;                       /* Space between items */
     flex-direction: row;             /* Arrange items horizontally */
     box-sizing: border-box;          /* Include padding and borders in the width/height calculation */
+
 }
 
 @media (max-width: 768px) {

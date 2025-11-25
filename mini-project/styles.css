@@ -39,7 +39,7 @@ h1,h2,h3,h4,h5,h6 {
     align-items:left;
     align-content: center;
     gap: 16px;
-    padding: 8px;
+    padding: 16px;
     
 }
 
@@ -63,9 +63,12 @@ h1,h2,h3,h4,h5,h6 {
     border-color: gray;
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
+    padding: 0px;
+
+    align-items: center;
     gap: 16px;
-    width: 150px;
+    width: 221px;
     height: 128px;
 }
 
@@ -121,6 +124,7 @@ h1,h2,h3,h4,h5,h6 {
   padding-left: var(--pad-header-inline);
  */
   padding-right: 8px;
+
   background-color: var(--color-header-bg);
   color: var(--color-header-text);
 }
@@ -141,33 +145,43 @@ h1,h2,h3,h4,h5,h6 {
   display: flex;
   align-items: center;
   gap: clamp(0.75rem, 1vw, 1rem);
+  justify-content: center;
 }
 
 /* Fluid logo & wordmark size */
 .corah-brand-logo {
   width: clamp(32px, 2.5vw + 24px, 48px);
-  height: auto;
+  height: 130px;
+  width: 55px;
   display: block;
+ 
 }
 
 .corah-brand-wordmark-logo {
   height: clamp(20px, 2vw + 12px, 32px);
   width: auto;
+  height: 45%;
   display: block;
 }
 
 /* Nav row */
 .nav-container {
+  margin-top: 16px;
   display: flex;
   align-items: center;
   flex-direction: wrap;
+  justify-content: left;
   width: max-content;
   height: fit-content;
-  gap: var(--gap-nav-links);
-  padding: var(--pad-nav-container);
+  gap: 28px;
+  padding-top: 32px;
+  padding-bottom: 18px;
+  padding-left: 32px;
+  padding-right: 32px;
 
   overflow-x: auto;
-
+  /*gap: var(--gap-nav-links);
+  padding: var(--pad-nav-container);*/
 
 
 }
@@ -185,10 +199,20 @@ h1,h2,h3,h4,h5,h6 {
   align-items: center;
   justify-content: center;
 
+  /*
   padding-top: var(--pad-nav-link-y-top);
   padding-right: var(--pad-nav-link-x);
   padding-bottom: var(--pad-nav-link-y-bottom);
   padding-left: var(--pad-nav-link-x);
+  */
+    padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 8px;
+  padding-left: 8px;
+  font-size: 20px;
+
+  gap: 10px;
+
   border-radius: 999px;
   border: none;
   text-decoration:none;
@@ -203,6 +227,11 @@ h1,h2,h3,h4,h5,h6 {
   background-color: #7B458F;
   font-weight: 900;
     width: auto;
+    height: fit-content;
+    min-width: 205px;
+    max-width: 205px;
+    flex-wrap: wrap;
+    flex-direction: column;
 
 
   white-space: nowrap;
@@ -210,36 +239,38 @@ h1,h2,h3,h4,h5,h6 {
 
 }
 
-/* Stacked (vertical) navbar on smaller screens */
+/*
+/* Stacked (vertical) navbar on smaller screens 
 @media (max-width: 768px) {
   .nav-container {
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    gap: 10px;              /* Adjust space between items */
+    flex-direction: column; /* Stack items vertically on smaller screens 
+    gap: 10px;              /* Adjust space between items 
   }
 }
 
-/* Optional: Ensure the navbar stays horizontal on larger screens */
+/* Optional: Ensure the navbar stays horizontal on larger screens 
 @media (min-width: 1024px) {
   .nav-container {
 
-    flex-direction: row; /* Ensure horizontal layout on large screens */
+    flex-direction: row; /* Ensure horizontal layout on large screens 
     align-items: center;
     justify-content: space-between;
     gap: var(--gap-nav-links);
   }
 }
+*/
 
 
-
+/*
 @media (min-width: 1024px) {
   .header-container {
     max-width: 1200px;
     margin-inline: auto;
   }
 }
-
+*/
 
 .nav-link {
   color:white;
@@ -359,6 +390,8 @@ font-weight: 900;
   border-color: rgb(235, 235, 235);
   border-width: 30px;
   gap: 30px;
+  flex-wrap: wrap;
+
   
 }
 
@@ -370,12 +403,12 @@ font-weight: 900;
   flex-wrap: wrap;
    flex-grow: 1;
   flex-direction:column;
-    font-size: 40px
+    font-size: 20px
 }
 
 .cta-button-component-volunteer, .cta-button-container-volunteer {
   background-color: aqua ;
-  font-size: 32px;
+  font-size: 20px;
 
 }
 
@@ -384,7 +417,6 @@ font-weight: 900;
     border-style: solid;
     border-color:#000000;
     border-radius: 24px;
-    gap: 50px;
     padding: 10px;
     background-color: #7B458F;
     color:white;
@@ -392,7 +424,7 @@ font-weight: 900;
     text-decoration: none;
     width: 280px;
     height: fit-content;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     display: inline-flex;
   
@@ -426,7 +458,7 @@ font-weight: 900;
 .hero-image-container {
     border-style: solid;
     border-color: green;
-
+    min-width: 320px;
     width: 40%;                   /* Full width but constrained by max-width */
     height: 100%;
     border-radius: 24px;
@@ -443,41 +475,45 @@ font-weight: 900;
 
 }
 
+/* 
+
 @media (max-width: 1300px) {
     .cta {
-        height: auto;              /* Let the height adjust on smaller screens */
-        flex-wrap: wrap;           /* Allow wrapping on smaller screens */
-        justify-content: center;   /* Center items */
+        height: auto;               Let the height adjust on smaller screens 
+        flex-wrap: wrap;           /* Allow wrapping on smaller screens 
+        justify-content: center;   /* Center items 
     }
     .hero_button1 {
-        width: fit-content;               /* Full width on smaller screens */
-        justify-content: center;   /* Center the button */
+        width: fit-content;               /* Full width on smaller screens 
+        justify-content: center;   /* Center the button 
         display:flex;
         flex-wrap: wrap;
         flex-direction:column;
     }
     .hero_button {
-        width: fit-content;               /* Full width on smaller screens */
-        justify-content: center;   /* Center the button */
+        width: fit-content;               /* Full width on smaller screens 
+        justify-content: center;   /* Center the button 
         display:flex;
         flex-wrap: wrap;
         flex-direction:column;
     }
 }
 
-/* Stacked (vertical) navbar on smaller screens */
+/* Stacked (vertical) navbar on smaller screens 
 @media (max-width: 1300px) {
   .cta-container {
     justify-content: center;
-    align-items: center;    /* Center the items horizontally */
+    align-items: center;    /* Center the items horizontally 
     width: 100%;
     height: fit-content;
     display:inline-flex;
-    flex-direction: column; /* Stack items vertically on smaller screens */
+    flex-direction: column; /* Stack items vertically on smaller screens 
     
-    gap: 10px;              /* Adjust space between items */
+    gap: 10px;              /* Adjust space between items 
   }
-}
+} 
+
+*/
 
 footer {
   width: 100%;
@@ -511,7 +547,7 @@ padding-right: 16px;
 padding-top: 8px;
 padding-bottom: 8px;
 margin-left: 16px;
-
+font-size: 20px;
 }
 
 .sitemap-links-container {

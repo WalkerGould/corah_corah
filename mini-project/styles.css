@@ -71,8 +71,7 @@ h1,h2,h3,h4,h5,h6 {
 
 
 .button-container {
-    background-color: #7B458F;
-    color: #FFFFFF;
+    background-color: #253a39;
 
     display: flex;
     flex-wrap: wrap;
@@ -81,7 +80,12 @@ h1,h2,h3,h4,h5,h6 {
     border-style: solid;
     border-color: gray;
     flex-grow: 10;                    /* Each item can grow to take available space */
-    text-align: left;    
+    text-align: center;
+    color:white;
+    font-weight:900;
+    align-items: center;
+    justify-content: center;
+
 }
 
 /* Stack vertically on smaller screens */
@@ -163,11 +167,16 @@ h1,h2,h3,h4,h5,h6 {
   padding: var(--pad-nav-container);
 
   overflow-x: auto;
+
+
+
 }
 
 /* Each nav “button” wrapper */
 .button-container {
   padding: var(--space-3);
+
+
 }
 
 /* Nav link as a pill */
@@ -182,25 +191,31 @@ h1,h2,h3,h4,h5,h6 {
   padding-left: var(--pad-nav-link-x);
   border-radius: 999px;
   border: none;
-  text-decoration: none;
+  text-decoration:none;
+  color:white;
   border-style: solid;
   border-color: rgb(24, 23, 23);
   font-size: clamp(0.85rem, 0.3vw + 0.8rem, 1rem);
-  font-weight: 600;
-  color: var(--color-header-link-primary);
-  background-color: var(--color-header-link-primary-bg);
+  /*font-weight: 600;*/
+/*  color: var(--color-header-link-primary);*/
+ /*  background-color: var(--color-header-link-primary-bg); */
+  color: white;
+  background-color: #7B458F;
+  font-weight: 900;
     width: auto;
 
 
   white-space: nowrap;
+
 
 }
 
 /* Stacked (vertical) navbar on smaller screens */
 @media (max-width: 768px) {
   .nav-container {
+    justify-content: center;
+    align-items: center;
     flex-direction: column; /* Stack items vertically on smaller screens */
-    align-items: center;    /* Center the items horizontally */
     gap: 10px;              /* Adjust space between items */
   }
 }
@@ -208,6 +223,7 @@ h1,h2,h3,h4,h5,h6 {
 /* Optional: Ensure the navbar stays horizontal on larger screens */
 @media (min-width: 1024px) {
   .nav-container {
+
     flex-direction: row; /* Ensure horizontal layout on large screens */
     align-items: center;
     justify-content: space-between;
@@ -224,18 +240,19 @@ h1,h2,h3,h4,h5,h6 {
   }
 }
 
-.nav-link:focus-visible {
-  outline: 2px solid #FFFFFF;
-  outline-offset: 2px;
-}
 
+.nav-link {
+  color:white;
+  text-decoration: none;
+  font-weight:900;
+}
 
 main.hero-page-container {
 
     display:flex;
     flex-wrap:wrap;
-    background-color: rgb(173, 161, 161);
-    gap: 200px;
+    background-color: rgb(209, 209, 209);
+    gap: 100px;
     padding-top: 16px;
     padding-bottom: 16px;
     padding-left: 16px;
@@ -246,6 +263,7 @@ main.hero-page-container {
     border-style: solid;
     border-color: red;
     flex-direction: row; /* Ensure horizontal layout on large screens */
+
   
 
 
@@ -260,6 +278,9 @@ main.hero-page-container {
     border-style: solid;
     border-color: blue;
     width: 50%;
+
+    
+  
 }
 
 
@@ -281,101 +302,123 @@ main.hero-page-container {
  align-items:center;
  gap: 8px;
  border-style: solid;
+ color: black;
+font-weight: 900;
 
 }
 
 .subheadline {
   display: inline-flex;  /* Aligns the header and subheading inline */
-  align-items: center;   /* Centers vertically (if they have different heights) */
-  gap: 10px;             /* Space between the header and subheading */
-    min-width: 320px;
-    font-size: 32px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-
-    height: 20%;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 16px;
-    padding-right: 16px;
-    justify-content: center;
-    align-items:center;
-    gap: 8px;
-    border-style: solid;
-    width: 90%;
+  align-items: center;   /* Centers vertically (if they have different heights) */            /* Space between the header and subheading */
+  font-size: 32px;
+  display: inline-flex;
+ flex-wrap: wrap;
+ flex-grow: 1;
+ width: 90%;
+ height:fit-content;
+ min-width: 320px;
+ padding-top: 16px;
+ padding-bottom: 16px;
+ padding-left: 16px;
+ padding-right: 16px;
+ justify-content: center;
+ align-items:center;
+ gap: 8px;
+ border-style: solid;
+ color: black;
+font-weight: 900;
 
 }
 
 
 .cta {
-    display: inline-flex;  /* Aligns the header and subheading inline */
-   /* Centers vertically (if they have different heights) */
-    gap: 10px;             /* Space between the header and subheading */
-    min-width: 320px;
-    font-size: 32px;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    flex-direction: row;
-    width: 90%;
-    height: 20%;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 16px;
-    padding-right: 16px;
-    justify-content: left;
-    gap: 8px;
-    border-style: solid;
-    border-color: yellow;
-    flex-direction: row;
+  display: flex;  /* Aligns the header and subheading inline */
+  align-items: center;   /* Centers vertically (if they have different heights) */            /* Space between the header and subheading */
+  font-size: 40px;
+ flex-wrap: wrap;
+ flex-grow: 1;
+ flex-direction: row;
+ width: 90%;
+ height:fit-content;
+ min-width: 320px;
+ padding-top: 16px;
+ padding-bottom: 16px;
+ padding-left: 16px;
+ padding-right: 16px;
+ justify-content: center;
+ align-items:center;
+ gap: 8px;
+ border-style: solid;
+  
 }
 
 
 .cta-container {
 
   display: flex;
-  border-color: rgb(0, 98, 128);
+  border-color: rgb(235, 235, 235);
   border-width: 30px;
+  gap: 30px;
+  
+}
+
+
+.cta-button-component-register,.cta-button-frame-register {
+  background-color: aqua ;
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+   flex-grow: 1;
+  flex-direction:column;
+    font-size: 40px
+}
+
+.cta-button-component-volunteer, .cta-button-container-volunteer {
+  background-color: aqua ;
+  font-size: 32px;
+
 }
 
 .hero_button {
 
     border-style: solid;
-    border-color: green;
-    width: 100%;                   /* Let the width adjust automatically */
-    height: fit-content;           /* Height adjusts based on content */
-          /* Maximum width */
-    min-width: 245px;              /* Minimum width */
+    border-color:#000000;
     border-radius: 24px;
+    gap: 50px;
+    padding: 10px;
     background-color: #7B458F;
-    display: flex;
-    flex-wrap: wrap;             /* Prevent wrapping of items inside the button */
-    justify-content: space-between; /* Distribute space between button items */
-    gap: 16px;                     /* Space between items inside the button */
-    padding: 16px;                 /* Apply uniform padding */
-    box-sizing: border-box;        /* Ensure padding and border are included in width/height */
-    flex-direction: row;           /* Align child items horizontally */
+    color:white;
+    font-weight:900;
+    text-decoration: none;
+    width: 280px;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+    display: inline-flex;
+  
+  
+
 }
 
 
 
 .hero_button1 {
-  margin-left: 85px;
     border-style: solid;
-    border-color: green;
-    width: 100%;                   /* Let the width adjust automatically */
-    height: fit-content;           /* Height adjusts based on content */
-           /* Maximum width */
-    min-width: 245px;              /* Minimum width */
+    border-color:#000000;
     border-radius: 24px;
+    gap: 10px;
+    padding: 10px;
     background-color: #7B458F;
-    display: flex;
-    flex-wrap: wrap;             /* Prevent wrapping of items inside the button */
-    justify-content: space-between; /* Distribute space between button items */
-    gap: 16px;                     /* Space between items inside the button */
-    padding: 16px;                 /* Apply uniform padding */
-    box-sizing: border-box;        /* Ensure padding and border are included in width/height */
-    flex-direction: row;           /* Align child items horizontally */
+    color:white;
+    font-weight:900;
+    text-decoration: none;
+    width: 280px;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+
+
 }
 
 
@@ -383,10 +426,9 @@ main.hero-page-container {
 .hero-image-container {
     border-style: solid;
     border-color: green;
-    max-width: 687px;                /* Maximum width */
-    min-width: 245px;                /* Minimum width */
-    width: 50%;                    /* Full width but constrained by max-width */
-    height: fit-content;
+
+    width: 40%;                   /* Full width but constrained by max-width */
+    height: 100%;
     border-radius: 24px;
     background-color: #7B458F;
     display: flex;
@@ -401,17 +443,146 @@ main.hero-page-container {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
     .cta {
         height: auto;              /* Let the height adjust on smaller screens */
         flex-wrap: wrap;           /* Allow wrapping on smaller screens */
         justify-content: center;   /* Center items */
     }
     .hero_button1 {
-        width: 100%;               /* Full width on smaller screens */
+        width: fit-content;               /* Full width on smaller screens */
         justify-content: center;   /* Center the button */
         display:flex;
         flex-wrap: wrap;
-        flex-direction:row;
+        flex-direction:column;
     }
+    .hero_button {
+        width: fit-content;               /* Full width on smaller screens */
+        justify-content: center;   /* Center the button */
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction:column;
+    }
+}
+
+/* Stacked (vertical) navbar on smaller screens */
+@media (max-width: 1300px) {
+  .cta-container {
+    justify-content: center;
+    align-items: center;    /* Center the items horizontally */
+    width: 100%;
+    height: fit-content;
+    display:inline-flex;
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    
+    gap: 10px;              /* Adjust space between items */
+  }
+}
+
+footer {
+  width: 100%;
+ background-color: rgb(219, 219, 219);
+gap: 16px;
+padding: 16px;
+display: inline-block;
+
+}
+
+.sitemap {
+display: flex;
+flex-direction: column;
+border-color:rgb(202, 131, 39);
+background-color:azure;
+gap: 16px;
+padding: 16px;
+
+}
+
+.footer-sitemap-container-text-header {
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: black;
+font-weight: 900;
+padding-left: 16px;
+padding-right: 16px;
+padding-top: 8px;
+padding-bottom: 8px;
+margin-left: 16px;
+
+}
+
+.sitemap-links-container {
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 16px;
+width: 100%;
+font-size: 20px;
+padding: 16px;
+
+
+
+}
+
+.footer_button {
+    border-style: solid;
+    border-color:#000000;
+    border-radius: 24px;
+    gap: 10px;
+    padding: 10px;
+    background-color: #7B458F;
+    color:white;
+    font-weight:900;
+    text-decoration: none;
+    width: 280px;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+
+  
+
+    
+}
+
+.footer-social-media-icon-frame {
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 20px;
+padding: 10px;
+width: 100%;
+
+}
+
+.footer-copyright-frame {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+gap: 10px;
+padding: 10px;
+width: 100%;
+color: black;
+font-weight: 900;
+}
+
+.nscc-logo-footer-frame {
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 8px;
+padding: 16px;
+width: 100%;
+color: black;
+font-weight: 900;
 }

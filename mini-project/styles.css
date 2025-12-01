@@ -677,6 +677,7 @@ footer {
   gap: 20px;
   padding: 10px;
   width: 100%;
+  color: var(--neutral-999);
   box-shadow: 4px 4px 12px rgba(0,0,0,0.4);
 }
 
@@ -690,6 +691,7 @@ footer {
   width: 100%;
   color: var(--neutral-999);
   font-weight: 900;
+  
   box-shadow: 4px 4px 12px rgba(0,0,0,0.4);
 }
 
